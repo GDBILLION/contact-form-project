@@ -1,0 +1,110 @@
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin: 0;
+}
+
+.container{
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* header */
+
+h1{
+    text-align: center;
+}
+
+.slide-down{
+    animation: slideDownFade 1.8s ease-out;
+}
+
+/* inputs */
+.slide-left{
+    animation: slideInLeft 1.8s ease-out forwards;
+    opacity: 0;
+}
+
+.delay{
+    animation-delay: 0.2s;
+}
+
+.slide-up {
+    animation: slideInUp 2.1s ease-out forwards;
+    opacity: 0;
+} 
+
+.delay2{
+    animation-delay: 0.2s;
+}
+
+input, textarea{
+    width: 100%;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: #0078D7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,120,215,0.4);
+    transition: all 0.5s ease-in-out;
+}
+
+form button:hover{
+    background: #005fa3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,120,215,0.6);
+}
+
+#statusMessage{
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* animations */
+@keyframes slideDownFade {
+    0% {
+        opacity : 0;
+        transform: translateY(-50px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
